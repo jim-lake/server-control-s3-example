@@ -1,0 +1,5 @@
+node_modules
+/test_repo
+.DS_Store
+config.json
+/.git_commit_hash

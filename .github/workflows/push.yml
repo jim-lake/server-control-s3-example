@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: publish-to-s3
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.repository }}-single-publish
+  cancel-in-progress: false
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Configure AWS credentials from Test account
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-region: us-west-2
+          role-to-assume: arn:aws:iam::430818961858:role/github-s3-role
+          role-session-name: githubsession
+      - uses: actions/checkout@v3
+      - name: Package and and upload
+        uses: jim-lake/node-package-action@v1.0.2
+        id: package
+        with:
+          cwd: ./
+          files: ./
+          s3prefix: server-control-s3-example/example-app
+      - name: Get the output
+        run: echo "The output was ${{ steps.package.outputs.out_file }}"
