@@ -31,7 +31,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-region: us-west-2
-          role-to-assume: arn:aws:iam::430818961858:role/github-s3-role
+          role-to-assume: arn:aws:iam::430818961858:role/server-control-s3-example-github-s3-role
           role-session-name: githubsession
       - uses: actions/checkout@v3
       - name: Package and and upload
