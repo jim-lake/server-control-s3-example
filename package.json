@@ -1,6 +1,6 @@
 {
   "name": "server-control-s3-tester",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "main": "server.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "express": "4.18.2",
-    "server-control-s3": "^0.0.14"
+    "server-control-s3": "^0.0.15"
   }
 }

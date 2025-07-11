@@ -1,17 +1,17 @@
 {
   "name": "server-control-s3-tester",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "server-control-s3-tester",
-      "version": "0.0.4",
+      "version": "0.0.5",
       "dependencies": {
         "body-parser": "^1.20.2",
         "cookie-parser": "^1.4.6",
         "express": "4.18.2",
-        "server-control-s3": "^0.0.14"
+        "server-control-s3": "^0.0.15"
       }
     },
     "node_modules/@aws-crypto/crc32": {
@@ -2508,9 +2508,9 @@
       }
     },
     "node_modules/server-control-s3": {
-      "version": "0.0.14",
-      "resolved": "https://registry.npmjs.org/server-control-s3/-/server-control-s3-0.0.14.tgz",
-      "integrity": "sha512-h+tprUaqRBKR8SLwAMKRvE8SK417SeSV7HtX0Bovf0b2h21sbK81JhvOJDR8MI+Y/rL2B80Ub66B76g6PgTA9g==",
+      "version": "0.0.15",
+      "resolved": "https://registry.npmjs.org/server-control-s3/-/server-control-s3-0.0.15.tgz",
+      "integrity": "sha512-QDFzKVK3agZyINbM/NSEEd2Gi/NvOo1OAHwIWlBZZNVaNztiT8a2S9IShiFUoN38igPPywdJ975d7hEzLZ2NRA==",
       "license": "MIT",
       "dependencies": {
         "@aws-sdk/client-auto-scaling": "^3.525.0",
